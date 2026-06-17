@@ -1,0 +1,29 @@
+/* 1. Import Tailwind CSS v4 Core Styles */
+@import "tailwindcss";
+
+/* 2. Define Custom Luxury Design Tokens (Tailwind v4 native config) */
+@theme {
+  --color-luxury-dark: #1E140F;       /* Deepest luxury espresso brown */
+  --color-luxury-medium: #4E3E35;     /* Medium earthy brown for body copy */
+  --color-luxury-accent: #C5A080;     /* Gold sand accent */
+  --color-luxury-cream: #FAF8F5;      /* Soft, premium off-white background */
+  --color-luxury-white: #FFFFFF;      /* Clean pure white */
+  --color-luxury-border: #E8E2D9;     /* Thin sand dividers */
+
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+/* 3. Global CSS Standard Elements */
+body {
+  background-color: var(--color-luxury-cream);
+  color: var(--color-luxury-dark);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base utility smoothing rule for high-contrast serif typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
