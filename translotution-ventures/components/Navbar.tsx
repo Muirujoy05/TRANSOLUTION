@@ -27,7 +27,7 @@ export function Navbar() {
           
           {/* Logo Block */}
           <Link href="/" className="flex flex-col cursor-pointer">
-            <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] font-light uppercase">TRANSLOTUTION</span>
+            <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] font-light uppercase">TRANSOLUTION</span>
             <span className="text-[9px] tracking-[0.45em] text-luxury-accent uppercase font-sans">VENTURES</span>
           </Link>
 

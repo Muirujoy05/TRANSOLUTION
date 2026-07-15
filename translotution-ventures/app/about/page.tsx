@@ -1,47 +1,39 @@
 import React from 'react';
-import { Compass, Shield, Heart, Play } from 'lucide-react';
+
 
 const teamMembers = [
   {
-    name: "David Kangethe",
+    name: "Patrick Njiru",
     role: "Chief Executive Officer & Founder",
-    bio: "Dedicated to shifting luxury travel from consumption to conservation, David directs our vision and builds high-end partnerships across the continent.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4" // Placeholder video - replace with your .mp4 file
+    image: "patrick.jpg"
+  },
+  
+  {
+    name: "Janet Njeri ",
+    role: "logistics, planning and booking expert",
+    image: "janet.jpg"
   },
   {
-    name: "Sarah Gichuru",
-    role: "Director of Wilderness Expeditions",
-    bio: "With over fifteen years mapping remote terrains, Sarah coordinates our complex overland safaris, mobile fly-camping logistics, and private flight logs.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    name: "James Mwaura",
+    role: "East African expert",
+    image: "mwaura.jpg" // Replace with "/images/team-3.jpg"
   },
   {
-    name: "Michael Kamau",
-    role: "Head of Guest Experience & Concierge",
-    bio: "Managing detailed custom requests, Michael secures exclusive private estate takeovers, personal chef setups, and fluid border transitions.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    name: "Joy Ntokozi",
+    role: "Zimbabwe tour leader",
+    image: "joy.jpg" // Replace with "/images/team-4.jpg"
   },
   {
-    name: "Dr. Elizabeth Naiputari",
-    role: "Chief Conservation Liaison",
-    bio: "A researcher in savannah ecology, Elizabeth audits our wilderness lodge partners to guarantee absolute environmental preservation and fair local wages.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
-  },
-  {
-    name: "Jackson Ole-Saitoti",
-    role: "Senior Naturalist & Lead Safari Guide",
-    bio: "Jackson leads our premier private tracking safaris in the Mara and Amboseli, translating the flora and fauna through ancestral Maasai perspectives.",
-    image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=600",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    name: "James Boro",
+    role: "South Africa tour guide",
+    image: "james.jpg" // Replace with "/images/team-5.jpg"
   }
 ];
+// =========================================================================
 
 export default function About() {
   return (
-    <div className="py-16">
+    <div className="py-16 bg-luxury-cream text-luxury-dark">
       
       {/* 1. HEADER BANNER */}
       <section className="bg-luxury-dark text-luxury-white py-24 text-center px-4">
@@ -65,9 +57,9 @@ export default function About() {
               Whether it is tracking gorillas in the cloud-forests of Rwanda, listening to conservation tales from Maasai elders, or relaxing on private coastal escapes in Lamu, our routes reflect a balanced alignment of pristine preservation and tailored luxury.
             </p>
           </div>
-          <div className="relative aspect-[3/4] overflow-hidden">
+          <div className="relative aspect-[3/4] overflow-hidden border border-luxury-border shadow-sm">
             <img 
-              src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200" 
+              src="about.jpg "
               alt="Luxury safari viewing deck" 
               className="w-full h-full object-cover"
             />
@@ -96,7 +88,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 4. MEET THE TEAM SECTION (5 People with Video Intros) */}
+      {/* 4. MEET THE TEAM SECTION (Clean Grid of Pictures, Names, and Roles) */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-luxury-accent mb-4 font-semibold">Our Custodians</p>
@@ -106,41 +98,28 @@ export default function About() {
           </p>
         </div>
 
-        {/* 5-Member Grid (Adapts to 3 columns on desktop, centering the bottom 2) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-center">
+        {/* 5-Member Clean Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-center">
           {teamMembers.map((member) => (
-            <div key={member.name} className="flex flex-col h-full border border-luxury-border bg-luxury-white p-6 justify-between shadow-sm">
-              <div>
-                
-                {/* Immersive Video/Poster Card */}
-                <div className="relative overflow-hidden aspect-[4/5] bg-luxury-dark mb-6 group">
-                  <video 
-                    className="w-full h-full object-cover absolute inset-0 z-10" 
-                    poster={member.image} 
-                    controls
-                    preload="none"
-                  >
-                    <source src={member.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  
-                  {/* Visual Overlay indicator matching Black Tomato aesthetic */}
-                  <div className="absolute inset-0 bg-luxury-dark bg-opacity-20 group-hover:bg-opacity-40 transition-all z-0 pointer-events-none flex items-center justify-center">
-                    <div className="bg-luxury-cream bg-opacity-95 rounded-full p-4 shadow-lg text-luxury-dark hover:scale-105 transition-transform">
-                      <Play size={20} fill="#1E140F" className="ml-0.5" />
-                    </div>
-                  </div>
-                </div>
+            <div key={member.name} className="flex flex-col h-full bg-luxury-white border border-luxury-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              
+              {/* Photo Frame with subtle hover scale effect */}
+              <div className="relative overflow-hidden aspect-[4/5] bg-luxury-dark">
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 filter brightness-95" 
+                />
+              </div>
 
-                {/* Profile Meta details */}
+              {/* Profile Details Area */}
+              <div className="p-6 text-center border-t border-luxury-border">
                 <h3 className="font-serif text-2xl font-light text-luxury-dark mb-1">{member.name}</h3>
-                <span className="text-[10px] tracking-widest uppercase text-luxury-accent font-semibold block mb-4">
+                <span className="text-[10px] tracking-widest uppercase text-luxury-accent font-semibold block">
                   {member.role}
                 </span>
-                <p className="text-xs text-luxury-medium font-light leading-relaxed font-serif">
-                  {member.bio}
-                </p>
               </div>
+
             </div>
           ))}
         </div>

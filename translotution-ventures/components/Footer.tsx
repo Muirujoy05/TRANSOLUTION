@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="bg-luxury-dark text-luxury-cream py-16 px-4 sm:px-6 lg:px-8 border-t border-luxury-medium border-opacity-25">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div>
-          <span className="font-serif text-xl tracking-[0.2em] font-light uppercase">TRANSLOTUTION</span>
+          <span className="font-serif text-xl tracking-[0.2em] font-light uppercase">TRANSOLUTION</span>
           <span className="text-[9px] tracking-[0.45em] text-luxury-accent uppercase block mt-1 font-sans">VENTURES</span>
           <p className="text-[10px] text-luxury-accent opacity-60 mt-4 max-w-sm">
             Crafting custom bespoke travel and conservation-minded safaris throughout the African continent.
