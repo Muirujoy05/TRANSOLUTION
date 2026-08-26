@@ -28,7 +28,7 @@ export default function Contact() {
       
       {/* 1. HEADER BANNER */}
       <section className="bg-luxury-dark text-luxury-white py-24 text-center px-4">
-        <p className="text-xs tracking-[0.3em] uppercase text-luxury-accent mb-4 font-semibold">Direct Concierge</p>
+        <p className="text-xs tracking-[0.3em] uppercase text-luxury-accent mb-4 font-semibold">OUR CONTACTS</p>
         <h1 className="font-serif text-4xl md:text-6xl font-light max-w-4xl mx-auto leading-tight">
           Compose your custom <span className="italic">African itinerary.</span>
         </h1>
@@ -108,7 +108,7 @@ export default function Contact() {
             <div className="flex items-start gap-4">
               <MapPin className="text-luxury-accent shrink-0 mt-1" size={18} />
               <div>
-                <h4 className="text-[10px] uppercase tracking-widest font-semibold text-luxury-medium">Concierge Desk</h4>
+                <h4 className="text-[10px] uppercase tracking-widest font-semibold text-luxury-medium">location</h4>
                 <p className="text-xs text-luxury-dark font-serif font-light mt-1">Felma Building,Kahawa Sukari</p>
               </div>
             </div>
