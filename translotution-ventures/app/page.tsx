@@ -4,24 +4,15 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Compass, Shield } from 'lucide-react';
 
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Kenya Tours & Travel | Transolution Ventures',
-  description:
-    'Discover Kenya and beyond with Transolution Ventures. Explore destinations, safari adventures and travel services for your next trip.',
-}
-
-
-// Slideshow of verified, plate-free African scenery
+// 1. Hero Slideshow Images
 const heroImages = [
-  "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=1920", // Savannah Sunset
-  "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1920", // Serengeti Grasslands
-  "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80&w=1920", // Diani Beach Palms
-  "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=1920"  // Victoria Falls twilight
+  "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=1920",
+  "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1920",
+  "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80&w=1920",
+  "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=1920"
 ];
 
-// The Solstice Calendar dataset (Seasonal Curations)
+// 2. The Solstice Calendar dataset (Seasonal Curations)
 const seasonalCurations = [
   {
     id: 1,
@@ -38,7 +29,7 @@ const seasonalCurations = [
     title: "Kenya & Tanzania Migration Safari",
     duration: "8 Days",
     highlights: "Maasai Mara National Reserve • endless Serengeti Plains • Ngorongoro Crater Descent • Black Rhino Search",
-    image: "car image.jpg",
+    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=600",
     description: "Trace predator prides and massive herds across the borders of the Mara and Serengeti before descending the crater floor."
   },
   {
@@ -66,10 +57,8 @@ export default function Home() {
   return (
     <div className="bg-luxury-cream text-luxury-dark font-sans overflow-x-hidden">
 
-      {/* 1. CINEMATIC BACKGROUND SLIDESHOW HERO */}
+      {/* 1. CINEMATIC HERO SLIDESHOW */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        
-        {/* Render overlapping images with transitions */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           {heroImages.map((img, idx) => (
             <img 
@@ -81,11 +70,9 @@ export default function Home() {
               }`}
             />
           ))}
-          {/* Shading vignette for text clarity */}
           <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark/65 via-transparent to-luxury-dark/45" />
         </div>
         
-        {/* Hero Content */}
         <div className="relative z-10 text-center text-luxury-white px-4 max-w-4xl mt-12 drop-shadow-sm">
           <p className="text-xs tracking-[0.3em] uppercase text-luxury-accent mb-4 font-semibold">Tailor-Made African Expeditions</p>
           <h1 className="font-serif text-5xl md:text-7xl font-light leading-tight mb-6">
@@ -111,9 +98,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.3em] text-luxury-white opacity-60 flex flex-col items-center gap-2">
-          
+          <span>Scroll To Explore</span>
           <div className="w-[1px] h-10 bg-luxury-white bg-opacity-40 animate-pulse"></div>
         </div>
       </section>
@@ -132,7 +118,6 @@ export default function Home() {
           {seasonalCurations.map((curation) => (
             <div key={curation.id} className="group cursor-pointer flex flex-col h-full bg-luxury-white border border-luxury-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               
-              {/* Photo Frame */}
               <div className="relative overflow-hidden h-64 bg-luxury-dark">
                 <img 
                   src={curation.image} 
@@ -141,7 +126,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Text Area */}
               <div className="p-6 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex justify-between items-baseline mb-2">
@@ -151,7 +135,6 @@ export default function Home() {
                   <h3 className="font-serif text-xl font-light mb-3 leading-snug group-hover:text-luxury-medium transition-colors">{curation.title}</h3>
                   <p className="text-xs text-luxury-medium font-light leading-relaxed mb-4 font-serif">{curation.description}</p>
                   
-                  {/* Highlights Bullet List */}
                   <div className="border-t border-luxury-border border-opacity-60 pt-3 mb-6">
                     <span className="text-[9px] uppercase tracking-widest text-luxury-accent font-semibold block mb-1">Key Highlights</span>
                     <p className="text-[10px] text-luxury-medium font-serif font-light leading-relaxed">
@@ -198,7 +181,7 @@ export default function Home() {
           </div>
           <div className="relative h-96 md:h-[500px]">
             <img 
-              src="car image.jpg" 
+              src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1200" 
               alt="Curated luxury safari camp"
               className="w-full h-full object-cover filter brightness-90 shadow-2xl"
             />
