@@ -24,13 +24,21 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo with Image */}
-          <Link href="/" className="flex items-center gap-3 py-2 cursor-pointer">
+          {/* Logo with Name Side-by-Side */}
+          <Link href="/" className="flex items-center gap-3 py-2 cursor-pointer group">
             <img 
               src="/logo.png" 
               alt="Transolution Logo" 
-              className="h-14 w-auto object-contain"
+              className="h-12 sm:h-14 w-auto object-contain"
             />
+            <div className="flex flex-col">
+              <span className="font-serif text-base sm:text-xl tracking-[0.2em] font-light uppercase text-luxury-white group-hover:text-luxury-accent transition-colors">
+                TRANSOLUTION
+              </span>
+              <span className="text-[8px] sm:text-[9px] tracking-[0.4em] text-luxury-accent uppercase font-sans">
+                VENTURES
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation Links */}

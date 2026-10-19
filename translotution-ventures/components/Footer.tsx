@@ -6,13 +6,23 @@ export function Footer() {
     <footer className="bg-luxury-dark text-luxury-cream py-16 px-4 sm:px-6 lg:px-8 border-t border-luxury-medium border-opacity-25">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         
-        {/* Footer Logo & Description */}
+        {/* Footer Logo & Name Side-by-Side */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <img 
-            src="/logo.png" 
-            alt="Transolution Logo" 
-            className="h-16 w-auto object-contain mb-3"
-          />
+          <Link href="/" className="flex items-center gap-3 mb-3">
+            <img 
+              src="/logo.png" 
+              alt="Transolution Logo" 
+              className="h-12 w-auto object-contain"
+            />
+            <div className="flex flex-col text-left">
+              <span className="font-serif text-lg tracking-[0.2em] font-light uppercase text-luxury-white">
+                TRANSOLUTION
+              </span>
+              <span className="text-[8px] tracking-[0.4em] text-luxury-accent uppercase font-sans">
+                VENTURES
+              </span>
+            </div>
+          </Link>
           <p className="text-[10px] text-luxury-accent opacity-60 max-w-sm">
             Crafting custom luxury travel and conservation-minded safaris throughout the African continent.
           </p>
