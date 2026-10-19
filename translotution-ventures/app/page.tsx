@@ -4,6 +4,15 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Compass, Shield } from 'lucide-react';
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Kenya Tours & Travel | Transolution Ventures',
+  description:
+    'Discover Kenya and beyond with Transolution Ventures. Explore destinations, safari adventures and travel services for your next trip.',
+}
+
+
 // Slideshow of verified, plate-free African scenery
 const heroImages = [
   "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=1920", // Savannah Sunset

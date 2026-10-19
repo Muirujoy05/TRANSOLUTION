@@ -5,8 +5,16 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Translotution Ventures | Bespoke African Safaris & Travel",
-  description: "Exquisite and highly personalized African journeys tailored around how you desire to feel.",
+  metadataBase: new URL("https://transolution.africa"),
+  title: {
+    default: "Transolution Ventures | Kenya Tours & African Safaris",
+    template: "%s | Transolution Ventures",
+  },
+  description:
+    "Discover Kenya and Africa with Transolution Ventures. Explore safari adventures, beautiful destinations, and personalized travel experiences.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
