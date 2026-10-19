@@ -15,6 +15,38 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  // Browser Tab & Bookmark Icons
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+  // Search Engine & Social Media Link Preview (Google, WhatsApp, LinkedIn, Facebook)
+  openGraph: {
+    title: "Transolution Ventures | Kenya Tours & African Safaris",
+    description:
+      "Discover Kenya and Africa with Transolution Ventures. Explore safari adventures, beautiful destinations, and personalized travel experiences.",
+    url: "https://transolution.africa",
+    siteName: "Transolution Ventures",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 675,
+        alt: "Transolution Ventures Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  // Twitter / X Previews
+  twitter: {
+    card: "summary_large_image",
+    title: "Transolution Ventures | Kenya Tours & African Safaris",
+    description:
+      "Discover Kenya and Africa with Transolution Ventures. Explore safari adventures, beautiful destinations, and personalized travel experiences.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({

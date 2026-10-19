@@ -16,8 +16,7 @@ function InstagramIcon({ size = 18, className = "" }: { size?: number; className
       className={className}
     >
       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
     </svg>
   );
 }
@@ -60,7 +59,7 @@ export default function Contact() {
                     rel="noopener noreferrer" 
                     className="hover:text-luxury-accent transition-colors"
                   >
-                    +254 714 036800
+                    +254 714036800
                   </a>
                   <a 
                     href="https://wa.me/254722861427" 

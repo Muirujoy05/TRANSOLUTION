@@ -3,8 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-// Fixed: Removed the unused 'Phone' import to prevent TypeScript warnings
-import { Menu, X } from 'lucide-react'; 
+import { Menu, X } from 'lucide-react';
 
 export function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -13,7 +12,7 @@ export function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
-    { name: 'Packages', href: '/services' },
+    { name: 'Services & Packages', href: '/services' },
     { name: 'Destinations', href: '/destinations' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -25,13 +24,16 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo Block */}
-          <Link href="/" className="flex flex-col cursor-pointer">
-            <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] font-light uppercase">TRANSOLUTION</span>
-            <span className="text-[9px] tracking-[0.45em] text-luxury-accent uppercase font-sans">VENTURES</span>
+          {/* Logo with Image */}
+          <Link href="/" className="flex items-center gap-3 py-2 cursor-pointer">
+            <img 
+              src="/logo.png" 
+              alt="Transolution Logo" 
+              className="h-14 w-auto object-contain"
+            />
           </Link>
 
-          {/* Desktop Navigation Links (Now pushed elegantly to the right) */}
+          {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex space-x-8 text-xs tracking-[0.15em] uppercase font-light items-center">
             {navLinks.map((link) => (
               <Link 
@@ -48,14 +50,14 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Mobile menu trigger */}
+          {/* Mobile Menu Trigger */}
           <button onClick={() => setMobileMenu(!mobileMenu)} className="lg:hidden text-luxury-white">
             {mobileMenu ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu overlay */}
+      {/* Mobile Menu Overlay */}
       {mobileMenu && (
         <div className="lg:hidden bg-luxury-dark border-t border-luxury-medium border-opacity-30 py-6 px-4 space-y-4 text-xs tracking-widest uppercase flex flex-col items-center">
           {navLinks.map((link) => (
